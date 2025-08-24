@@ -7,7 +7,7 @@ const container = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.4 },
+    transition: { staggerChildren: 0.3 },
   },
   exit: {
     opacity: 0,
@@ -21,7 +21,7 @@ const fadeInUp = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 1.8, ease: "easeOut" }, // slower, smooth animation
+    transition: { duration: 1.8, ease: "easeOut" },
   },
   exit: {
     opacity: 0,
@@ -37,57 +37,52 @@ export default function HeroSection() {
       <motion.div
         className="bg-black text-white min-h-screen bg-[url('/images/home/digital.png')] bg-cover bg-center relative overflow-hidden"
         initial="hidden"
-        animate="visible"
-        exit="exit"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
         variants={container}
       >
         {/* Floating background glow */}
         <motion.div
-          className="absolute top-0 left-0 w-[500px] h-[500px] bg-orange-500/20 rounded-full blur-3xl"
+          className="absolute top-0 left-0 w-[500px] h-[500px] bg-orange-500/20 rounded-full blur-3xl pointer-events-none"
           animate={{ x: [0, 50, 0], y: [0, 30, 0], scale: [1, 1.1, 1] }}
           transition={{ type: "spring", stiffness: 100, damping: 15 }}
         />
 
+        {/* Header with logo and appointment */}
         <div className="flex items-center justify-between max-w-[1440px] mx-auto border-b-2 border-orange-600 mb-4">
-          <div className="flex items-center justify-center pt-6 sm:pt-10 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: -30, scale: 0.9 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{
-                opacity: 0,
-                y: -40,
-                scale: 0.85,
-                transition: { duration: 1.5, ease: "easeInOut", delay: 0.5 },
-              }}
-              transition={{ type: "spring", stiffness: 100, damping: 15 }}
-            >
-              <Image
-                src="/images/home/logo.png"
-                alt="BayShore Logo"
-                width={280}
-                height={70}
-                className="mb-4 sm:mb-6 w-[200px] sm:w-[280px] md:w-[300px] h-auto"
-              />
-            </motion.div>
-          </div>
+          <motion.div
+            className="flex items-center justify-center pt-6 sm:pt-10 relative z-10"
+            initial={{ opacity: 0, y: -30, scale: 0.9 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ type: "spring", stiffness: 100, damping: 15 }}
+          >
+            <Image
+              src="/images/home/logo.png"
+              alt="BayShore Logo"
+              width={280}
+              height={70}
+              className="mb-4 sm:mb-6 w-[200px] sm:w-[280px] md:w-[300px] h-auto"
+            />
+          </motion.div>
 
           <motion.div
-            exit={{
-              opacity: 0,
-              y: -20,
-              transition: { duration: 1.2, ease: "easeInOut", delay: 1 },
-            }}
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
           >
             <h1>Appointment goes here</h1>
           </motion.div>
         </div>
 
+        {/* Hero Content */}
         <motion.div
           className="relative max-w-[1440px] mx-auto px-6 flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between gap-10 z-10"
           variants={container}
           initial="hidden"
-          animate="visible"
-          exit="exit"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
         >
           {/* Left Content */}
           <motion.div className="max-w-xl text-center lg:text-left" variants={fadeInUp}>
@@ -117,11 +112,7 @@ export default function HeroSection() {
               />
               <div>
                 <div className="flex justify-center sm:justify-start text-yellow-400 space-x-1">
-                  {Array(5)
-                    .fill(0)
-                    .map((_, i) => (
-                      <span key={i}>★</span>
-                    ))}
+                  {Array(5).fill(0).map((_, i) => <span key={i}>★</span>)}
                 </div>
                 <p className="text-xs sm:text-sm">5 | 484 Reviews</p>
                 <a href="#" className="text-xs sm:text-sm hover:underline">
@@ -139,13 +130,8 @@ export default function HeroSection() {
           <motion.div
             className="flex justify-center mt-[150px]"
             initial={{ scale: 0.8, opacity: 0, x: 50 }}
-            animate={{ scale: 1, opacity: 1, x: 0 }}
-            exit={{
-              scale: 0.8,
-              opacity: 0,
-              x: 100,
-              transition: { duration: 1.5, ease: "easeInOut", delay: 0.7 },
-            }}
+            whileInView={{ scale: 1, opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
             transition={{ type: "spring", stiffness: 100, damping: 15 }}
             whileHover={{ scale: 1.05, rotate: 0 }}
           >
@@ -154,7 +140,7 @@ export default function HeroSection() {
               alt="Hero Person"
               width={500}
               height={400}
-              className="rounded-lg mt-6 sm:mt-10 lg:mt-[120px] w-[100%] h-[100%] sm:w-[70%] md:w-[500px] lg:w-[600px]  shadow-2xl "
+              className="rounded-lg mt-6 sm:mt-10 lg:mt-[120px] w-[100%] h-[100%] sm:w-[70%] md:w-[500px] lg:w-[600px] shadow-2xl"
             />
           </motion.div>
         </motion.div>
@@ -167,8 +153,8 @@ export default function HeroSection() {
             className="text-xl sm:text-2xl md:text-[34px] font-bold mb-10"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 1.8, ease: "easeOut", delay: 0.2 }}
-            viewport={{ once: true }}
           >
             Our actions produce results for our clients. Don’t just take our
             word for it. Let our clients’ success stories speak for themselves.
@@ -179,8 +165,7 @@ export default function HeroSection() {
             variants={container}
             initial="hidden"
             whileInView="visible"
-            exit="exit"
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             {[
               { amount: "$6,000,000", text: "Car Accident Claim: $6,000,000" },
@@ -208,4 +193,3 @@ export default function HeroSection() {
     </div>
   );
 }
-  
