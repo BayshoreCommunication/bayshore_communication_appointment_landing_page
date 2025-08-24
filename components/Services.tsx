@@ -126,7 +126,7 @@ export default function Services() {
       </h2>
       <p className="sm:text-[28px] text-gray-600 max-w-3xl mx-auto mb-12">
         Construction sector is considered to be one of the main sources of
-        national's economy and also country development.
+        nationals economy and also country development.
       </p>
 
       {/* Services 1 */}
