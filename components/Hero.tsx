@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function Home() {
   return (
     <div className="w-full max-w-[1440px] min-h-screen mx-auto bg-white overflow-hidden font-sans relative px-4 sm:px-6 lg:px-12 py-8">
-      {/* Floating Images with animation (hidden on small screens) */}
+      {/* Floating Images  */}
       <Image
         src="/images/home/memoji.png"
         alt="Memoji"
@@ -19,7 +19,13 @@ export default function Home() {
         height={60}
         className="hidden md:block absolute top-56 left-[45%] animate-float-delayed"
       />
-
+      <Image
+        src="/images/home/send.png"
+        alt="Memoji"
+        width={110}
+        height={230}
+        className="hidden md:block absolute top-[70%] right-[50%] animate-float"
+      />
       {/* Header */}
       <div className="flex justify-between items-center py-4">
         <div className="flex items-center gap-2">
@@ -38,7 +44,7 @@ export default function Home() {
 
       {/* Main Content */}
       <div className="flex flex-col-reverse lg:flex-row justify-between items-center gap-12 mt-10">
-        {/* Left Section with Framer Motion */}
+        {/* Left Section  */}
         <motion.div
           className="max-w-xl text-center lg:text-left"
           initial={{ x: -100, opacity: 0 }}
@@ -88,7 +94,9 @@ export default function Home() {
             </div>
             <div>
               <div className="flex flex-col  gap-3 text-left">
-                <p className="font-semibold text-sm sm:text-base">4.9 (484 Reviews)</p>
+                <p className="font-semibold text-sm sm:text-base">
+                  4.9 (484 Reviews)
+                </p>
                 {/* <p className="text-gray-600 text-sm"></p> */}
               </div>
               <a
@@ -101,7 +109,7 @@ export default function Home() {
           </div>
         </motion.div>
 
-        {/* Right Section with Framer Motion */}
+        {/* Right Section */}
         <motion.div
           className="flex justify-center lg:justify-end w-full"
           initial={{ x: 100, opacity: 0 }}
