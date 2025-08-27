@@ -134,8 +134,9 @@ const Schedule = () => {
                 {/* Icon with hover effect */}
                 <motion.div
                   className="w-20 h-20 mb-6"
-                  whileHover={{ scale: 1.15, rotate: 5 }}
-                  transition={{ type: "spring", stiffness: 200, damping: 10 }}
+                  whileHover={{ scale: 1.4 }}
+                  transition={{ duration: 0.3 }}
+
                 >
                   <Image
                     src={step.icon}

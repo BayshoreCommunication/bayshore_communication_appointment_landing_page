@@ -8,6 +8,7 @@ import Marketing from "@/components/Services";
 import ResultsSection from "@/components/ResultsSection";
 import Schedule from "@/components/Schedule";
 import WhyUsSection from "@/components/WhyUsSection";
+import Hero from "@/components/Hero";
 
 // Motion variants for scroll animations
 const fadeInUp = {
@@ -23,34 +24,8 @@ export default function Home() {
   return (
     <div className="overflow-hidden bg-white">
       {/* Hero Section */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={fadeInUp}
-      >
-        <HeroSection />
-      </motion.div>
 
-      {/* Schedule Section */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={fadeInUp}
-      >
-        <Schedule />
-      </motion.div>
-
-      {/* Marketing/Services Section */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={fadeInUp}
-      >
-        <Marketing />
-      </motion.div>
+      <Hero />
 
       {/* Results Section */}
       <motion.div
@@ -70,6 +45,25 @@ export default function Home() {
         variants={fadeInUp}
       >
         <WhyUsSection />
+      </motion.div>
+      {/* Schedule Section */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={fadeInUp}
+      >
+        <Schedule />
+      </motion.div>
+
+      {/* Marketing/Services Section */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={fadeInUp}
+      >
+        {/* <Marketing /> */}
       </motion.div>
 
       {/* Blueprint Section */}

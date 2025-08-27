@@ -47,7 +47,7 @@ const cardVariants = {
 
 export default function ResultsSection() {
   return (
-    <section className="bg-white mt-[-40px] px-4 sm:px-6 md:px-12 overflow-hidden">
+    <section className="bg-white px-4 sm:px-6 md:px-12 overflow-hidden">
       {/* Heading */}
       <motion.div
         className="max-w-[1440px] mx-auto text-center md:text-left"
@@ -57,9 +57,9 @@ export default function ResultsSection() {
         viewport={{ once: true }}
       >
         <h2 className="text-xl sm:text-[48px] font-bold leading-normal">
-          <span className="bg-black text-white px-2">RECENT RESULTS</span> WE HAVE VE
-          GOTTEN FOR AGENCY OWNERS, COACHES & CONSULTANTS JUST LIKE YOU:
-        </h2> 
+          <span className="bg-black text-white px-2">RECENT RESULTS</span> WE
+          HAVE GOTTEN FOR AGENCY OWNERS, COACHES & CONSULTANTS JUST LIKE YOU:
+        </h2>
         <p className="mt-3 sm:mt-4 text-gray-600 text-base sm:text-lg md:text-xl lg:text-[28px]">
           How we took our clients’ businesses to the next level!
         </p>
@@ -70,13 +70,13 @@ export default function ResultsSection() {
         <Swiper
           modules={[Pagination, Navigation, Autoplay]}
           spaceBetween={20}
-          slidesPerView={2} // Show 2 slides at a time
+          slidesPerView={2}
           navigation
           pagination={{ clickable: true }}
           autoplay={{ delay: 5000, disableOnInteraction: false }}
           breakpoints={{
-            0: { slidesPerView: 1 }, 
-            768: { slidesPerView: 2 }, 
+            0: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
           }}
           className="custom-swiper"
         >
@@ -89,9 +89,12 @@ export default function ResultsSection() {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
-                whileHover={{ y: -10, boxShadow: "0px 20px 40px rgba(0,0,0,0.15)" }}
+                whileHover={{
+                  y: -10,
+                  boxShadow: "0px 20px 40px rgba(0,0,0,0.15)",
+                }}
               >
-                {/* Parallax Image */}
+                {/* Image */}
                 <div className="relative w-full h-[200px] sm:h-[250px] overflow-hidden group">
                   <motion.div
                     className="w-full h-full"
@@ -99,13 +102,13 @@ export default function ResultsSection() {
                     whileInView={{ scale: 1, y: 0 }}
                     transition={{ duration: 1, ease: "easeOut" }}
                     viewport={{ once: true }}
-                    // whileHover={{ scale: 1.1, y: -10 }}
+                    
                   >
                     <Image
                       src={slide.img}
                       alt={slide.title}
                       fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="object-cover transition-transform duration-700 group-hover:scale-110 hover:rounded-2xl"
                       priority
                     />
                   </motion.div>
@@ -148,21 +151,32 @@ export default function ResultsSection() {
             transform: scale(1.3);
           }
 
-          /* Navigation arrows without background */
           .custom-swiper .swiper-button-next,
           .custom-swiper .swiper-button-prev {
-            width: 40px;
-            height: 40px;
-            background: transparent; /* remove background */
-            color: #6b7280;
-            border: none; /* remove border */
-            box-shadow: none; /* remove shadow */
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: #ffffff;
+            color: #000000;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
             transition: all 0.3s ease;
           }
+
           .custom-swiper .swiper-button-next:hover,
           .custom-swiper .swiper-button-prev:hover {
+            background: #f3f4f6;
             color: #f97316;
-            transform: scale(1.1);
+            transform: scale(1.05);
+          }
+
+          .custom-swiper .swiper-button-next::after,
+          .custom-swiper .swiper-button-prev::after {
+            font-size: 14px;
+            font-weight: bold;
           }
         `}</style>
       </section>

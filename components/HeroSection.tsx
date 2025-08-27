@@ -35,7 +35,7 @@ export default function HeroSection() {
     <div>
       {/* Hero Section */}
       <motion.div
-        className="bg-black text-white min-h-screen bg-[url('/images/home/digital.png')] bg-cover bg-center relative overflow-hidden"
+        className="bg-black text-white min-h-screen bg-[url('/images/home/digital1.png')] bg-cover bg-center relative overflow-hidden"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
@@ -72,7 +72,9 @@ export default function HeroSection() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
-            <h1>Appointment goes here</h1>
+            <h1> 
+              
+            </h1>
           </motion.div>
         </div>
 
@@ -136,7 +138,7 @@ export default function HeroSection() {
             whileHover={{ scale: 1.05, rotate: 0 }}
           >
             <Image
-              src="/images/home/person.png"
+              src="/images/home/image.png"
               alt="Hero Person"
               width={500}
               height={400}

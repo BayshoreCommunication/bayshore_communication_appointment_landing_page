@@ -6,9 +6,8 @@ import { Providers } from "./providers";
 
 
 export const metadata: Metadata = {
-  title: "Bayshore",
+  title: "Bayshore Communication Appointments",
   description: "",
-  metadataBase: new URL("https://www.teamsabbirnasir.com"),
   alternates: {
     canonical: "/",
     languages: {
