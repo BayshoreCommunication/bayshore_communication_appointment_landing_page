@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="w-full max-w-[1440px] min-h-screen mx-auto bg-white overflow-hidden font-sans relative px-4 sm:px-6 lg:px-12 py-8">
+    <div className="w-full max-w-[1440px] min-h-screen mx-auto bg-white overflow-hidden font-sans relative px-4 mt-6">
       {/* Floating Images  */}
       <Image
         src="/images/home/memoji.png"
