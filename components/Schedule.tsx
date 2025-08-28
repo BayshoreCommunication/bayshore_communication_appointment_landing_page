@@ -49,7 +49,7 @@ const Schedule = () => {
           viewport={{ once: true }}
         >
           <h1 className="text-center text-2xl sm:text-[48px] font-bold leading-normal">
-            <span className="bg-black text-white px-2">Schedule</span> Your
+            <span className="bg-orange-600 text-white px-2">Schedule</span> Your
             Discovery Call
           </h1>
           <p className="text-base sm:text-[28px] text-gray-400 text-center mt-4">
