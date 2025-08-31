@@ -177,11 +177,16 @@ export default function BlueprintSection() {
               below to fix a suitable date and time that works for you.
               We&apos;ll contact you shortly. Don&apos;t miss this opportunity.
             </p>
-            <a href="#schedule">
-              <button className="text-[10px] sm:text-xl bg-orange-600 hover:bg-orange-700 transition-colors text-white font-semibold px-6 py-3 rounded-md shadow-md">
-                BOOK NOW 30 MIN FREE CONSULTATION
-              </button>
-            </a>
+
+            <button
+              className="text-[10px] sm:text-xl bg-orange-600 hover:bg-orange-700 transition-colors text-white font-semibold px-6 py-3 rounded-md shadow-md"
+              onClick={() => {
+                const section = document.getElementById("schedule");
+                if (section) section.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              BOOK NOW 30 MIN FREE CONSULTATION
+            </button>
           </div>
         </div>
       </div>

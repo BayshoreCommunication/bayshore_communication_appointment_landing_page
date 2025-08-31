@@ -110,11 +110,16 @@ export default function Home() {
               className="w-[120px] sm:w-[200px] md:w-[250px]"
             />
           </div>
-          <a href="#schedule">
-            <button className="bg-orange-500 w-[150px] sm:w-[150px] hover:bg-orange-600 text-white px-4 py-2 sm:px-6 rounded-full shadow-md text-sm sm:text-base">
-              Schedule Call
-            </button>
-          </a>
+
+          <button
+            className="bg-orange-500  sm:w-[200px] hover:bg-orange-600 text-white px-4 py-2 sm:px-6 rounded-full shadow-md text-sm sm:text-base"
+            onClick={() => {
+              const section = document.getElementById("schedule");
+              if (section) section.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            Schedule Call
+          </button>
         </div>
 
         {/* Main Content */}
@@ -142,11 +147,16 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
-              <a href="#schedule">
-                <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-md w-full sm:w-[200px] text-sm sm:text-base">
-                  Schedule Call 
-                </button>
-              </a>
+              <button
+                className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-md w-full sm:w-[200px] text-sm sm:text-base"
+                onClick={() => {
+                  const section = document.getElementById("schedule");
+                  if (section) section.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                Schedule Call
+              </button>
+
               <p className="text-gray-700 text-sm sm:text-base max-w-sm">
                 You don’t pay for effort—you pay for{" "}
                 <span className="font-semibold">real, measurable growth.</span>
