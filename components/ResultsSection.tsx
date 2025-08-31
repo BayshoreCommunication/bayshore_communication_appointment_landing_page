@@ -47,7 +47,7 @@ const cardVariants = {
 
 export default function ResultsSection() {
   return (
-    <section className="bg-white px-4 sm:px-6 md:px-12 overflow-hidden">
+    <section className=" px-4 sm:px-6 md:px-12 mt-6 lg:mt-12 sm:mt-0 overflow-hidden">
       {/* Heading */}
       <motion.div
         className="max-w-[1440px] mx-auto text-center md:text-left"
@@ -56,7 +56,7 @@ export default function ResultsSection() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        <h2 className="text-xl sm:text-[48px] font-bold leading-normal">
+        <h2 className="text-xl lg:text-[36px] xl:text-[48px] font-bold leading-normal">
           <span className="bg-orange-600 text-white px-2">RECENT RESULTS</span> WE
           HAVE GOTTEN FOR AGENCY OWNERS, COACHES & CONSULTANTS JUST LIKE YOU:
         </h2>
@@ -66,7 +66,7 @@ export default function ResultsSection() {
       </motion.div>
 
       {/* Results Cards */}
-      <section className="max-w-[1440px] mx-auto px-2 sm:px-4 py-8 sm:py-12">
+      <section className="max-w-[1240px] mx-auto px-2 sm:px-4 py-8 sm:py-12">
         <Swiper
           modules={[Pagination, Navigation, Autoplay]}
           spaceBetween={20}
@@ -108,7 +108,7 @@ export default function ResultsSection() {
                       src={slide.img}
                       alt={slide.title}
                       fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-110 hover:rounded-2xl"
+                      className="object-cover transition-transform duration-700 group-hover:scale-110 hover:rounded-2xl h-[400px] sm:h-[250px]"
                       priority
                     />
                   </motion.div>

@@ -121,7 +121,7 @@ export default function Services() {
 
   return (
     <section className="max-w-[1440px] min-h-screen mx-auto px-6 py-16 text-center">
-      <h2 className="text-3xl md:text-[48px] font-bold text-gray-900 mb-4">
+      <h2 className="text-3xl lg:text-[36px] xl:text-[48px] font-bold text-gray-900 mb-4">
         Our Services
       </h2>
       <p className="sm:text-[28px] text-gray-600 max-w-3xl mx-auto mb-12">

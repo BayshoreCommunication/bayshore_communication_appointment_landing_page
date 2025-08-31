@@ -13,7 +13,7 @@ const slideVariants = {
 
 export default function WhyUsSection() {
   return (
-    <div className="w-full flex justify-center bg-[#0b0c1b] py-16 px-6 sm:px-8 overflow-hidden">
+    <div className="w-full flex justify-center bg-[#0b0c1b] py-16 px-6 sm:px-8 lg:px-16 overflow-hidden">
       <div className="w-[1440px] grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Left Section */}
         <motion.div
@@ -23,7 +23,7 @@ export default function WhyUsSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-orange-600 mb-6">
+          <h2 className="text-2xl lg:text-[36px] xl:text-[48px] font-extrabold text-orange-600 mb-6">
             WHY US?
           </h2>
           <p className="text-gray-300 mb-6 text-base sm:text-lg leading-relaxed">

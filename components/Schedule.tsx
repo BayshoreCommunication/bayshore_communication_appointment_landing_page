@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "next/image";
 import { InlineWidget } from "react-calendly";
-import { motion } from "framer-motion";
 
 const Schedule = () => {
   const steps = [
@@ -38,34 +37,22 @@ const Schedule = () => {
   ];
 
   return (
-    <div className="bg-white min-h-screen px-8">
+    <div className="bg-white min-h-screen px-8" id="schedule">
       <div className="w-full mx-auto">
         {/* Heading */}
-        <motion.div
-          className="max-w-[1440px] mx-auto mt-10"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h1 className="text-center text-2xl sm:text-[48px] font-bold leading-normal">
+        <div className="max-w-[1440px] mx-auto mt-10 text-center">
+          <h1 className="text-2xl lg:text-[36px] xl:text-[48px] font-bold leading-normal">
             <span className="bg-orange-600 text-white px-2">Schedule</span> Your
             Discovery Call
           </h1>
-          <p className="text-base sm:text-[28px] text-gray-400 text-center mt-4">
+          <p className="text-base sm:text-[28px] text-gray-400 mt-4">
             Your responses are strictly confidential and will be used to tailor
             a customized strategy for you before our call.
           </p>
-        </motion.div>
+        </div>
 
         {/* Calendly Widget */}
-        <motion.div
-          className="mt-10 mb-[-50px]"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div className="mt-10 sm:mb-[-50px] mb-6">
           <div className="md:hidden">
             <InlineWidget
               url="https://calendly.com/bayshorepartners/45min"
@@ -92,20 +79,14 @@ const Schedule = () => {
               }}
             />
           </div>
-        </motion.div>
+        </div>
 
         {/* Learn Section */}
-        <motion.div
-          className="max-w-[1440px] mx-auto text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h1 className="text-[48px] font-bold mb-4 ">
+        <div className="max-w-[1440px] mx-auto text-center">
+          <h1 className="text-2xl sm:text-[48px] font-bold mb-4">
             What You’ll Learn on Your Discovery Call:
           </h1>
-          <p className="text-[24px] text-gray-500 mb-4">
+          <p className="lg:text-[36px] xl:text-[48px] text-gray-500 mb-4">
             Not a sales pitch. No fluff, no gimmicks—
           </p>
           <p className="text-gray-500 mb-10">
@@ -117,27 +98,18 @@ const Schedule = () => {
             </span>
             .
           </p>
-        </motion.div>
+        </div>
 
         {/* Steps Section */}
         <div className="w-full max-w-[1440px] mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
             {steps.map((step, idx) => (
-              <motion.div
+              <div
                 key={idx}
                 className="flex-1 flex flex-col items-center text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: idx * 0.2 }}
-                viewport={{ once: true }}
               >
-                {/* Icon with hover effect */}
-                <motion.div
-                  className="w-20 h-20 mb-6"
-                  whileHover={{ scale: 1.4 }}
-                  transition={{ duration: 0.3 }}
-
-                >
+                {/* Icon */}
+                <div className="w-20 h-20 mb-6">
                   <Image
                     src={step.icon}
                     alt={`Step ${idx + 1}`}
@@ -145,10 +117,10 @@ const Schedule = () => {
                     height={48}
                     className="mx-auto"
                   />
-                </motion.div>
+                </div>
 
                 <p className="text-gray-600 text-[18px]">{step.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

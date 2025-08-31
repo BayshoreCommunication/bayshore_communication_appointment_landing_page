@@ -15,7 +15,7 @@ const listVariants = {
 export default function BlueprintSection() {
   return (
     <div>
-      <div className="max-w-[1440px] mx-auto px-8 py-16">
+      <div className="max-w-[1440px] mx-auto px-8  2xl:px-0 py-16">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: -40 }}
@@ -24,7 +24,7 @@ export default function BlueprintSection() {
           viewport={{ once: true }}
           className="text-center mb-6"
         >
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
+          <h2 className="text-2xl lg:text-[36px] xl:text-[48px] font-bold text-gray-900">
             The Blueprint for{" "}
             <span className="text-black">Law Firm Growth & Success</span>
           </h2>
@@ -71,9 +71,7 @@ export default function BlueprintSection() {
                   viewport={{ once: true }}
                 >
                   <span className="text-orange-600">✓</span>{" "}
-                  <span className="font-bold">
-                    {text.split("–")[0].trim()}
-                  </span>{" "}
+                  <span className="font-bold">{text.split("–")[0].trim()}</span>{" "}
                   – {text.split("–")[1]}
                 </motion.li>
               ))}
@@ -105,9 +103,7 @@ export default function BlueprintSection() {
                   viewport={{ once: true }}
                 >
                   <span className="text-orange-600">✓</span>{" "}
-                  <span className="font-bold">
-                    {text.split("–")[0].trim()}
-                  </span>{" "}
+                  <span className="font-bold">{text.split("–")[0].trim()}</span>{" "}
                   – {text.split("–")[1]}
                 </motion.li>
               ))}
@@ -129,6 +125,7 @@ export default function BlueprintSection() {
             className="flex justify-center md:w-1/4"
           >
             <Image
+              className="w-full max-w-[300px] md:max-w-[353px] h-auto"
               src="images/blueprint/image3.png"
               alt="alt"
               width={353}
@@ -156,22 +153,41 @@ export default function BlueprintSection() {
         </motion.div>
       </div>
 
+      <div className="w-full flex justify-center py-8 px-8 mt-[-40px]">
+        <div
+          className=" relative w-full max-w-[1440px] mx-auto rounded-xl overflow-hidden px-8 py-12 text-center text-white"
+          style={{
+            backgroundImage: "url('/images/home/image24.png')", // replace with your image path
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="absolute inset-0 bg-black/50 "></div>
+
+          {/* Content */}
+          <div className="relative z-10 max-w-3xl mx-auto ">
+            <h2 className="text-2x sm:text-[48px] font-bold mb-4">
+              <span className="bg-white text-black px-2 py-1 rounded">
+                Consultations
+              </span>{" "}
+              for Our Service
+            </h2>
+            <p className="text-base md:text-lg text-gray-200 mb-6">
+              Consultations for our service are free and easy. Simply click
+              below to fix a suitable date and time that works for you.
+              We&apos;ll contact you shortly. Don&apos;t miss this opportunity.
+            </p>
+            <a href="#schedule">
+              <button className="text-[10px] sm:text-xl bg-orange-600 hover:bg-orange-700 transition-colors text-white font-semibold px-6 py-3 rounded-md shadow-md">
+                BOOK NOW 30 MIN FREE CONSULTATION
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Bottom Images */}
       <div className="flex items-center justify-center flex-col px-8">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          <Image
-            className="my-20 w-[1440px]"
-            src="images/blueprint/image1.png"
-            alt="alt"
-            width={1280}
-            height={302}
-          />
-        </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -179,7 +195,7 @@ export default function BlueprintSection() {
           viewport={{ once: true }}
         >
           <Image
-            className="mb-20"
+            className="mb-20 w-full max-w-[200px] sm:max-w-[400px] h-auto"
             src="images/blueprint/logo.png"
             alt="alt"
             width={400}
