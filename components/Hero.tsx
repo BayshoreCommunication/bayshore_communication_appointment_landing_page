@@ -12,7 +12,7 @@ export default function Home() {
   };
 
   return (
-    <div className=" min-h-screen  bg-white overflow-hidden font-sans relative px-4 mt-6 md:px-16">
+    <div className=" min-h-[90vh]  bg-white overflow-hidden font-sans relative px-4 mt-6 md:px-16">
       <div className="max-w-[1440px] mx-auto">
         {/* Floating Images */}
         <motion.div
@@ -85,7 +85,7 @@ export default function Home() {
           />
         </motion.div>
         <motion.div
-          className="hidden xl:block lg:right-[43%] lg:w-[100px] absolute top-[60%] right-[50%]"
+          className="hidden xl:block lg:right-[43%] lg:w-[100px] xl:w-[160px] absolute top-[60%] right-[50%]"
           variants={floatOnce}
           initial="hidden"
           animate="visible"
@@ -131,7 +131,7 @@ export default function Home() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <h1 className="text-2xl lg:text-[36px] xl:text-[48px] font-semibold leading-snug">
+            <h1 className="text-2xl lg:text-[36px] xl:text-[48px] mt-[-40px] sm:mt-0 font-semibold leading-snug">
               Bayshore Communication helps attorneys{" "}
               <span className="bg-orange-600 text-white px-2">
                 attract quality
@@ -201,17 +201,14 @@ export default function Home() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
           >
-            <Image
-              src="/images/home/content.png"
-              alt="Content Illustration"
-              width={480}
-              height={400}
-              className="w-full max-w-[280px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[550px] lg:h-[400px] xl:h-[600px]"
-              // style={{
-              //   width: "480px",
-              //   height: "400px",
-              // }}
-            />
+            <div className="relative w-full max-w-[280px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[550px] lg:h-[400px] xl:h-[600px]">
+              <Image
+                src="/images/home/content.png"
+                alt="Content Illustration"
+                fill
+                className="object-contain"
+              />
+            </div>
           </motion.div>
         </div>
 

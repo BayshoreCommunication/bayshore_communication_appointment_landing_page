@@ -47,7 +47,7 @@ const cardVariants = {
 
 export default function ResultsSection() {
   return (
-    <section className=" px-4 sm:px-6 md:px-12 mt-6 lg:mt-12 sm:mt-0 overflow-hidden">
+    <section className=" px-4 sm:px-6 md:px-12 mt-6 lg:mt-12 sm:mt-0  overflow-hidden">
       {/* Heading */}
       <motion.div
         className="max-w-[1440px] mx-auto text-center md:text-left"
