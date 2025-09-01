@@ -45,22 +45,22 @@ const Schedule = () => {
             <span className="bg-orange-600 text-white px-2">Schedule</span> Your
             Discovery Call
           </h1>
-          <p className="text-base sm:text-[28px] text-gray-400 mt-4">
+          <p className="text-base mt-4">
             Your responses are strictly confidential and will be used to tailor
             a customized strategy for you before our call.
           </p>
         </div>
 
         {/* Calendly Widget */}
-        <div
-          className="mt-10 mb-10 w-full mx-auto h-[800px] md:h-[900px] lg:h-[900px] overflow-hidden rounded-xl 
-          [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
-        >
+        <div className="m-10 mb-16 w-full max-w-[800px] mx-auto rounded-xl h-[800px] overflow-hidden ">
           <InlineWidget
             url="https://calendly.com/bayshorepartners/45min"
             styles={{
               width: "100%",
-              height: "100%",
+              height: "100%", // fill parent
+              minHeight: "600px", // match parent height
+              border: "0",
+              display: "block",
             }}
             pageSettings={{
               backgroundColor: "ffffff",

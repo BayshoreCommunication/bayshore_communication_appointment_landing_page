@@ -7,7 +7,7 @@ import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "Bayshore Communication Appointments",
-  description: "Transform. Scale. Soar.",
+  description: "Bayshore Communication Appointments",
   metadataBase: new URL("https://www.business-growth.bayshorecommunication.com/"),
   alternates: {
     canonical: "/",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    images: "/opengraph-image.png",
+    images: "/opengraph-image.jpg",
   },
 };
 
