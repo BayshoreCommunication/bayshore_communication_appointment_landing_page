@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay, Mousewheel } from "swiper/modules";
 import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -53,6 +53,7 @@ export default function WhyUsSection() {
             slidesPerView={2}
             spaceBetween={20}
             speed={900}
+            loop={false} // Loop disabled
             autoplay={{
               delay: 3500,
               disableOnInteraction: false,
@@ -61,9 +62,9 @@ export default function WhyUsSection() {
               nextEl: ".custom-next",
               prevEl: ".custom-prev",
             }}
-            modules={[Navigation, Autoplay]}
+            mousewheel={{ releaseOnEdges: true }} // <-- Important for scroll past last slide
+            modules={[Navigation, Autoplay, Mousewheel]}
             className="h-full w-full"
-            loop={false} // <-- Loop disabled
           >
             {/* Slide 1 */}
             <SwiperSlide>
@@ -168,4 +169,3 @@ export default function WhyUsSection() {
     </div>
   );
 }
-  
