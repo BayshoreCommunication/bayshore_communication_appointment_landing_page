@@ -83,7 +83,7 @@ export default function ResultsSection() {
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
               <motion.div
-                className="bg-white rounded-2xl shadow-md overflow-hidden cursor-pointer h-[400px]"
+                className="bg-white rounded-2xl shadow-md overflow-hidden cursor-pointer h-[420px]"
                 custom={index}
                 variants={cardVariants}
                 initial="hidden"
