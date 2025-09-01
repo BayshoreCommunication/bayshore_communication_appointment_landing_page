@@ -127,9 +127,7 @@ export default function Home() {
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
             <h1 className="text-2xl lg:text-[36px] xl:text-[48px] mt-[-20px] sm:mt-0 font-semibold leading-snug">
-              Bayshore Communication helps attorneys{" "}
-              <span className="bg-orange-600 text-white px-2">attract quality</span>{" "}
-              cases with SEO, PPC, and social media tailored to the legal industry.
+              We help <span className="bg-orange-600 text-white px-2 uppercase">lawyers</span> dominate search results, grow reputation, and generate consistent leads without wasting time on outdated marketing.
             </h1>
             <p className="mt-4 text-gray-600 text-sm sm:text-base">
               You’re One Step Away From Discovering How You Can Consistently Attract High-Value
@@ -150,7 +148,7 @@ export default function Home() {
 
               <p className="text-gray-700 text-sm sm:text-base max-w-sm">
                 You don’t pay for effort—you pay for{" "}
-                <span className="font-semibold">real, measurable growth.</span>
+                <span className="font-semibold text-orange-600">real, measurable growth.</span>
               </p>
             </div>
 

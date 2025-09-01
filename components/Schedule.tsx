@@ -37,7 +37,7 @@ const Schedule = () => {
   ];
 
   return (
-    <div className="bg-white min-h-screen px-8" id="schedule">
+    <div className="bg-white min-h-[90vh] px-8" id="schedule">
       <div className="w-full mx-auto">
         {/* Heading */}
         <div className="max-w-[1440px] mx-auto mt-10 text-center">
@@ -52,33 +52,18 @@ const Schedule = () => {
         </div>
 
         {/* Calendly Widget */}
-        <div className="mt-10 sm:mb-[-50px] mb-6">
-          <div className="md:hidden">
-            <InlineWidget
-              url="https://calendly.com/bayshorepartners/45min"
-              styles={{ height: "800px" }}
-              pageSettings={{
-                backgroundColor: "ffffff",
-                hideEventTypeDetails: false,
-                hideLandingPageDetails: false,
-                primaryColor: "#0b7788",
-                textColor: "4d5055",
-              }}
-            />
-          </div>
-          <div className="hidden md:block">
-            <InlineWidget
-              url="https://calendly.com/bayshorepartners/45min"
-              styles={{ height: "930px" }}
-              pageSettings={{
-                backgroundColor: "ffffff",
-                hideEventTypeDetails: false,
-                hideLandingPageDetails: false,
-                primaryColor: "#0b7788",
-                textColor: "4d5055",
-              }}
-            />
-          </div>
+        <div className="mt-10 mb-10 w-full max-w-[1440px] mx-auto h-[800px] md:h-[900px] lg:h-[900px]">
+          <InlineWidget
+            url="https://calendly.com/bayshorepartners/45min"
+            styles={{ width: "100%", height: "100%" }}
+            pageSettings={{
+              backgroundColor: "ffffff",
+              hideEventTypeDetails: false,
+              hideLandingPageDetails: false,
+              primaryColor: "#0b7788",
+              textColor: "4d5055",
+            }}
+          />
         </div>
 
         {/* Learn Section */}
@@ -86,7 +71,7 @@ const Schedule = () => {
           <h1 className="text-2xl sm:text-[48px] font-bold mb-4">
             What You’ll Learn on Your Discovery Call:
           </h1>
-          <p className="lg:text-[36px] xl:text-[48px] text-gray-500 mb-4">
+          <p className="text-base text-gray-500 mb-4">
             Not a sales pitch. No fluff, no gimmicks—
           </p>
           <p className="text-gray-500 mb-10">

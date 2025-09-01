@@ -52,7 +52,6 @@ export default function WhyUsSection() {
             direction="vertical"
             slidesPerView={2}
             spaceBetween={20}
-            loop
             speed={900}
             autoplay={{
               delay: 3500,
@@ -64,6 +63,7 @@ export default function WhyUsSection() {
             }}
             modules={[Navigation, Autoplay]}
             className="h-full w-full"
+            loop={false} // <-- Loop disabled
           >
             {/* Slide 1 */}
             <SwiperSlide>
@@ -168,3 +168,4 @@ export default function WhyUsSection() {
     </div>
   );
 }
+  

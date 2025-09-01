@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
@@ -11,21 +10,22 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+// Replace images with YouTube video URLs
 const slides = [
   {
     title: "Trip Law",
     desc: "Since 2016, working with Trip Law, we've grown the practice from $60,000 to $2.3 million without spending a dime on ads. We consistently generate 20+ new client appointments per month, each with a $5,000 case value.",
-    img: "/images/resultsSection/Image1.png",
+    videoId: "RVit6poGLRs",
   },
   {
     title: "Apex Advisor",
     desc: "Apex had a strong brand presence, but poor SEO analysis from another agency left them invisible on Google. Our video production team built a powerful social media presence, driving trust through informative video marketing.",
-    img: "/images/resultsSection/Image2.png",
+    videoId: "ohyUTzLiLbI",
   },
   {
     title: "Catflix",
     desc: "Despite having a brilliant idea, the Catflix team needed SEO to get found online. Our content team created a high-performance SEO strategy that steadily grew traffic and visibility over time.",
-    img: "/images/resultsSection/Image1.png",
+    videoId: "iqHA7By9OAI",
   },
 ];
 
@@ -47,7 +47,7 @@ const cardVariants = {
 
 export default function ResultsSection() {
   return (
-    <section className=" px-4 sm:px-6 md:px-12 mt-6 lg:mt-12 sm:mt-0  overflow-hidden">
+    <section className="px-4 sm:px-6 md:px-12 mt-6 lg:mt-12 sm:mt-0 overflow-hidden">
       {/* Heading */}
       <motion.div
         className="max-w-[1440px] mx-auto text-center md:text-left"
@@ -57,8 +57,8 @@ export default function ResultsSection() {
         viewport={{ once: true }}
       >
         <h2 className="text-xl lg:text-[36px] xl:text-[48px] font-bold leading-normal">
-          <span className="bg-orange-600 text-white px-2">RECENT RESULTS</span> WE
-          HAVE GOTTEN FOR AGENCY OWNERS, COACHES & CONSULTANTS JUST LIKE YOU:
+          <span className="bg-orange-600 text-white px-2">RECENT RESULTS</span> <span className="lowercase">WE
+          HAVE GOTTEN FOR AGENCY OWNERS, COACHES & CONSULTANTS JUST LIKE YOU:</span>
         </h2>
         <p className="mt-3 sm:mt-4 text-gray-600 text-base sm:text-lg md:text-xl lg:text-[28px]">
           How we took our clients’ businesses to the next level!
@@ -83,35 +83,23 @@ export default function ResultsSection() {
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
               <motion.div
-                className="bg-white rounded-2xl shadow-md overflow-hidden cursor-pointer"
+                className="bg-white rounded-2xl shadow-md overflow-hidden cursor-pointer h-[400px]"
                 custom={index}
                 variants={cardVariants}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
-                whileHover={{
-                  y: -10,
-                  boxShadow: "0px 20px 40px rgba(0,0,0,0.15)",
-                }}
               >
-                {/* Image */}
-                <div className="relative w-full h-[200px] sm:h-[250px] overflow-hidden group">
-                  <motion.div
-                    className="w-full h-full"
-                    initial={{ scale: 1.2, y: 30 }}
-                    whileInView={{ scale: 1, y: 0 }}
-                    transition={{ duration: 1, ease: "easeOut" }}
-                    viewport={{ once: true }}
-                    
-                  >
-                    <Image
-                      src={slide.img}
-                      alt={slide.title}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-110 hover:rounded-2xl h-[400px] sm:h-[250px]"
-                      priority
-                    />
-                  </motion.div>
+                {/* Video */}
+                <div className="relative w-full h-[200px] sm:h-[250px] overflow-hidden">
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full"
+                    src={`https://www.youtube.com/embed/${slide.videoId}?rel=0&showinfo=0&controls=1`}
+                    title={slide.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
                 </div>
 
                 {/* Content */}

@@ -7,7 +7,8 @@ import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "Bayshore Communication Appointments",
-  description: "",
+  description: "Transform. Scale. Soar.",
+  metadataBase: new URL("https://www.business-growth.bayshorecommunication.com/"),
   alternates: {
     canonical: "/",
     languages: {

@@ -167,7 +167,7 @@ export default function BlueprintSection() {
           {/* Content */}
           <div className="relative z-10 max-w-3xl mx-auto ">
             <h2 className="text-2x sm:text-[48px] font-bold mb-4">
-              <span className="bg-white text-black px-2 py-1 rounded">
+              <span className="bg-orange-600 text-white px-2 py-1 rounded">
                 Consultations
               </span>{" "}
               for Our Service
