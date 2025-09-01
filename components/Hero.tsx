@@ -127,7 +127,7 @@ export default function Home() {
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
             <h1 className="text-2xl lg:text-[36px] xl:text-[48px] mt-[-20px] sm:mt-0 font-semibold leading-snug">
-              We help <span className="bg-orange-600 text-white px-2 uppercase">lawyers</span> dominate search results, grow reputation, and generate consistent leads without wasting time on outdated marketing.
+              We help lawyers dominate search results, grow reputation, and <span className="bg-orange-600 text-white px-2"> Generate Consistent Leads</span> without wasting time on outdated marketing.
             </h1>
             <p className="mt-4 text-gray-600 text-sm sm:text-base">
               You’re One Step Away From Discovering How You Can Consistently Attract High-Value
