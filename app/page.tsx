@@ -9,7 +9,6 @@ import ResultsSection from "@/components/ResultsSection";
 import Schedule from "@/components/Schedule";
 import WhyUsSection from "@/components/WhyUsSection";
 import Hero from "@/components/Hero";
-import SeoHead from "@/components/SeoHead";
 
 
 // Motion variants for scroll animations
