@@ -52,10 +52,16 @@ const Schedule = () => {
         </div>
 
         {/* Calendly Widget */}
-        <div className="mt-10 mb-10 w-full max-w-[1440px] mx-auto h-[800px] md:h-[900px] lg:h-[900px]">
+        <div
+          className="mt-10 mb-10 w-full mx-auto h-[800px] md:h-[900px] lg:h-[900px] overflow-hidden rounded-xl 
+          [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+        >
           <InlineWidget
             url="https://calendly.com/bayshorepartners/45min"
-            styles={{ width: "100%", height: "100%" }}
+            styles={{
+              width: "100%",
+              height: "100%",
+            }}
             pageSettings={{
               backgroundColor: "ffffff",
               hideEventTypeDetails: false,

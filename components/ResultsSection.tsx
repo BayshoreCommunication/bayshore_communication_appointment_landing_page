@@ -57,8 +57,8 @@ export default function ResultsSection() {
         viewport={{ once: true }}
       >
         <h2 className="text-xl lg:text-[36px] xl:text-[48px] font-bold leading-normal">
-          <span className="bg-orange-600 text-white px-2">RECENT RESULTS</span> <span className="lowercase">WE
-          have gotten for attorneys, Consultants and business professionals just like you</span>
+          <span className="bg-orange-600 text-white px-2">Recent Results</span> <span className="">We
+          Have Gotten For Attorneys, Consultants And Business Professionals Just Like You</span>
         </h2>
         <p className="mt-3 sm:mt-4 text-gray-600 text-base sm:text-lg md:text-xl lg:text-[28px]">
           How we took our clients’ businesses to the next level!
