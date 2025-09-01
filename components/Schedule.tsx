@@ -41,7 +41,7 @@ const Schedule = () => {
       <div className="w-full mx-auto">
         {/* Heading */}
         <div className="max-w-[1440px] mx-auto mt-10 text-center">
-          <h1 className="text-2xl lg:text-[36px] xl:text-[48px] font-bold leading-normal">
+          <h1 className="text-2xl lg:text-[36px] xl:text-[38px] font-bold leading-normal">
             <span className="bg-orange-600 text-white px-2">Schedule</span> Your
             Discovery Call
           </h1>
@@ -74,7 +74,7 @@ const Schedule = () => {
 
         {/* Learn Section */}
         <div className="max-w-[1440px] mx-auto text-center">
-          <h1 className="text-2xl sm:text-[48px] font-bold mb-4">
+          <h1 className="text-2xl sm:text-[38px] font-bold mb-4">
             What You’ll Learn on Your Discovery Call:
           </h1>
           <p className="text-base text-gray-500 mb-4">

@@ -24,7 +24,7 @@ export default function BlueprintSection() {
           viewport={{ once: true }}
           className="text-center mb-6"
         >
-          <h2 className="text-2xl lg:text-[36px] xl:text-[48px] font-bold text-gray-900">
+          <h2 className="text-2xl lg:text-[36px] xl:text-[38px] font-bold text-gray-900">
             The Blueprint for{" "}
             <span className="text-black">Law Firm Growth & Success</span>
           </h2>
@@ -166,7 +166,7 @@ export default function BlueprintSection() {
 
           {/* Content */}
           <div className="relative z-10 max-w-3xl mx-auto ">
-            <h2 className="text-2x sm:text-[48px] font-bold mb-4">
+            <h2 className="text-2x sm:text-[38px] font-bold mb-4">
               <span className="bg-orange-600 text-white px-2 py-1 rounded">
                 Consultations
               </span>{" "}

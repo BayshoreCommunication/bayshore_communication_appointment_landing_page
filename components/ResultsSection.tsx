@@ -56,11 +56,11 @@ export default function ResultsSection() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        <h2 className="text-xl lg:text-[36px] xl:text-[48px] font-bold leading-normal">
+        <h2 className="text-xl lg:text-[36px] xl:text-[38px] font-bold leading-normal">
           <span className="bg-orange-600 text-white px-2">Recent Results</span> <span className="">We
           Have Gotten For Attorneys, Consultants And Business Professionals Just Like You</span>
         </h2>
-        <p className="mt-3 sm:mt-4 text-gray-600 text-base sm:text-lg md:text-xl lg:text-[28px]">
+        <p className="mt-3 sm:mt-4  text-base ">
           How we took our clients’ businesses to the next level!
         </p>
       </motion.div>

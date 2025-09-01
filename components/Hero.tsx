@@ -14,7 +14,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-[90vh] bg-white overflow-hidden font-sans relative px-4 mt-6 md:px-16">
+    <div className="min-h-[80vh] bg-white overflow-hidden font-sans relative px-4 mt-6 md:px-12">
       <div className="max-w-[1440px] mx-auto">
         {/* Floating Images */}
         <motion.div
@@ -100,7 +100,6 @@ export default function Home() {
         </div>
 
         {/* Main Content */}
-        {/* Image FIRST in DOM; row reversed on lg so text ends up left, image right */}
         <div className="flex flex-col lg:flex-row-reverse items-stretch gap-8 lg:gap-12 mt-8 sm:mt-10">
           {/* Image Section (mobile top) */}
           <motion.div

@@ -48,7 +48,7 @@ export default function WhyUsSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <h2 className="text-2xl lg:text-[36px] xl:text-[48px] font-extrabold text-orange-600 mb-6">
+          <h2 className="text-2xl lg:text-[36px] xl:text-[38px] font-extrabold text-orange-600 mb-6">
             WHY US?
           </h2>
           <p className="text-gray-300 mb-6 text-base sm:text-lg leading-relaxed">
