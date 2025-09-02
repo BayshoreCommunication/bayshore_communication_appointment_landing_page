@@ -16,7 +16,20 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    images: "/opengraph-image.jpg",
+    title: "Bayshore Communication Appointments",
+    description: "Bayshore Communication Appointments",
+    url: "https://www.business-growth.bayshorecommunication.com/",
+    siteName: "Bayshore Communication",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,  
+        height: 630,
+        alt: "Bayshore Communication Appointments Preview",
+      },
+    ],
   },
 };
 
