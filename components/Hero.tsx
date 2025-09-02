@@ -89,7 +89,7 @@ export default function Home() {
           </div>
 
           <button
-            className="bg-orange-500 sm:w-[200px] hover:bg-orange-600 text-white px-4 py-2 sm:px-6 rounded-full shadow-md text-sm sm:text-base"
+            className="bg-orange-500 sm:w-[200px] hover:bg-orange-600 text-white px-4 py-3 sm:px-6 rounded-full shadow-md text-sm sm:text-base"
             onClick={() => {
               const section = document.getElementById("schedule");
               if (section) section.scrollIntoView({ behavior: "smooth" });
@@ -100,7 +100,6 @@ export default function Home() {
         </div>
 
         {/* Main Content */}
-  
         <div className="flex flex-col lg:flex-row-reverse items-stretch gap-8 lg:gap-12 mt-8 sm:mt-10">
           {/* Image Section (mobile top) */}
           <motion.div
@@ -109,12 +108,12 @@ export default function Home() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
           >
-            <div className="relative w-full max-w-[280px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[550px] h-[220px] sm:h-[300px] md:h-[380px] lg:h-[420px] xl:h-[550px]">
+            <div className="relative w-full h-[70vw] sm:h-[60vw] md:h-[50vw] lg:h-[420px] xl:h-[550px]">
               <Image
                 src="/images/home/content.png"
                 alt="Content Illustration"
                 fill
-                className="object-cover"
+                className="object-contain w-full"
               />
             </div>
           </motion.div>
