@@ -6,7 +6,7 @@ import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "Bayshore Communication Appointments",
-  description: "Bayshore Communication Appointments",
+  description: " We Help Lawyers Dominate Search Results, Grow Reputation, And Generate Consistent Leads</span> Without Wasting Time On Outdated Marketing.",
   metadataBase: new URL(
     "https://www.business-growth.bayshorecommunication.com"
   ),
