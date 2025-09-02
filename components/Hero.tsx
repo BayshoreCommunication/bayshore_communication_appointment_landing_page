@@ -108,7 +108,7 @@ export default function Home() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
           >
-            <div className="relative w-full max-w-[280px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[550px] h-[220px] sm:h-[300px] md:h-[380px] lg:h-[420px] xl:h-[550px]">
+            <div className="relative w-full max-w-[600px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[550px] h-[300px] sm:h-[300px] md:h-[380px] lg:h-[420px] xl:h-[550px]">
               <Image
                 src="/images/home/content.png"
                 alt="Content Illustration"
