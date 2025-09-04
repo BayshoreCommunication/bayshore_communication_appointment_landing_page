@@ -242,7 +242,7 @@ export default function Home() {
               </div>
 
               <div className="2xl:ml-[-70px]  ml-[-60px] mt-[70px]  xl:mt-0  p-6 flex flex-col text-center w-[220px] xl:ml-[-100px] 2xl:w-[270px] xl:w-[250px] mb-[70px]">
-                <h2 className="text-5xl xl:text-[100px] 2xl:text-[130px] font-bold sm:text-[40px] md:text-[50px] lg:text-[70px] xl:mb-[40px] ">
+                <h2 className="text-5xl xl:text-[100px] 2xl:text-[130px] font-bold sm:text-[40px] md:text-[50px] lg:text-[70px] xl:mb-[15px] ">
                   {count}+
                 </h2>
                 <p className="mt-2 text-sm xl:text-xl sm:text-base">
