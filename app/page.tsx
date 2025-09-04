@@ -24,9 +24,9 @@ const fadeInUp = {
 export default function Home() {
   return (
     <div className="overflow-hidden bg-white">
-      {/* Hero Section */}
+      <HeroSection></HeroSection>
 
-      <Hero />
+      {/* <Hero /> */}
 
       {/* Results Section */}
       <motion.div

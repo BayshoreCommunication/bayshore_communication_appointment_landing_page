@@ -124,7 +124,7 @@ export default function WhyUsSection() {
                       rotateY: -2,
                       boxShadow: "0 10px 25px rgba(0,0,0,0.3)",
                     }}
-                    className="bg-[#30323E] rounded-xl p-6 flex flex-col justify-center items-start h-[240px] border border-transparent hover:border-orange-500 transition-all duration-500"
+                    className="bg-[#30323E] rounded-xl p-6 flex flex-col justify-center items-start h-[240px] border border-transparent hover:border-orange-600 transition-all duration-500"
                   >
                     <span className="text-gray-500 text-6xl font-bold">{idx + 1}</span>
                     <h3 className="text-xl font-bold text-white mb-3">{slide.title}</h3>
