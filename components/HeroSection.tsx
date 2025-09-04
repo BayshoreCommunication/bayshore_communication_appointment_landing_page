@@ -216,7 +216,7 @@ export default function Home() {
           >
             {/* vector image  */}
             <motion.div
-            className="w-[90px]  xl:block absolute sm:left-[28%] md:left-[30%] top-[15%] left-[15%] xl:top-[-5%] xl:left-[32%] xl:w-[140px] "
+            className="w-[90px]  xl:block absolute sm:left-[28%] md:left-[30%] top-[15%] left-[15%] xl:top-[4%] xl:left-[32%] xl:w-[140px] "
             variants={floatOnce}
             initial="hidden"
             animate="visible"
@@ -230,8 +230,8 @@ export default function Home() {
             />
           </motion.div>
 
-            <div className="flex xl:flex-row items-center justify-center xl:pl-[80px] mb-16">
-              <div className="w-[200px] lg:w-[300px] xl:w-[400px] h-[400px] rounded-lg mb-[-80px] mt-[-50px]">
+            <div className="flex xl:flex-row items-center justify-center xl:pl-[80px]  mb-16 ">
+              <div className="w-[200px] lg:w-[300px] xl:w-[400px] h-[400px] rounded-lg mb-[-80px] mt-[-50px]  xl:p-0">
                 <Image
                   src="/images/homesection/left-1.png"
                   alt="Illustration"
@@ -241,11 +241,11 @@ export default function Home() {
                 />
               </div>
 
-              <div className="2xl:ml-[-30px] ml-[-60px] mt-[70px]  xl:mt-0 p-6 flex flex-col text-center w-[220px] xl:ml-[-110px] xl:w-[270px] mb-[70px]">
-                <h2 className="text-4xl xl:text-[110px] font-bold sm:text-[40px] md:text-[50px] lg:text-[70px] xl:mb-[40px] ">
+              <div className="2xl:ml-[-70px]  ml-[-60px] mt-[70px]  xl:mt-0  p-6 flex flex-col text-center w-[220px] xl:ml-[-100px] 2xl:w-[270px] xl:w-[250px] mb-[70px]">
+                <h2 className="text-5xl xl:text-[100px] 2xl:text-[130px] font-bold sm:text-[40px] md:text-[50px] lg:text-[70px] xl:mb-[40px] ">
                   {count}+
                 </h2>
-                <p className="mt-2  text-sm sm:text-base">
+                <p className="mt-2 text-sm xl:text-xl sm:text-base">
                   <span className="font-semibold">Clients</span> that we work
                   with, and trust us very much
                 </p>
@@ -258,7 +258,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="ml-0 xl:ml-[40px] 2xl:ml-[-40px] mt-[-150px] sm:mr-[-260px] sm:mb-[120px] xl:mt-[-70px] w-full sm:w-[640px] md:mb-[120px] md:mr-[-150px] lg:ml-[200px] lg:mt-[-120px] px-4 text-center mb-16 ">
+            <div className="ml-0 xl:ml-[40px] 2xl:ml-[-10px] mt-[-150px] sm:mr-[-260px] sm:mb-[120px] xl:mt-[-120px] w-full sm:w-[640px] md:mb-[120px] md:mr-[-150px] lg:ml-[200px] lg:mt-[-120px]  px-4 text-center mb-16 ">
               <Image
                 src="/images/homesection/left-2.png"
                 alt="Illustration"
